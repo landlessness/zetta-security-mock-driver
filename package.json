@@ -1,0 +1,26 @@
+{
+  "name": "zetta-security-mock-driver",
+  "version": "0.0.1",
+  "description": "Mock Zetta security system.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "zetta",
+    "security"
+  ],
+  "author": "Brian Mulloy <brian@landlessness.net>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/landlessness/zetta-security-mock-driver"
+  },
+  "bugs": {
+    "url": "https://github.com/landlessness/zetta-security-mock-driver/issues"
+  },
+  "homepage": "https://github.com/landlessness/zetta-security-mock-driver",
+  "dependencies": {
+    "zetta-device": "^0.18.0"
+  }
+}
