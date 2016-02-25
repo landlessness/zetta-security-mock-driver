@@ -14,13 +14,17 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/landlessness/zetta-security-mock-driver"
+    "url": "https://github.com/zettajs/zetta-security-mock-driver"
   },
   "bugs": {
-    "url": "https://github.com/landlessness/zetta-security-mock-driver/issues"
+    "url": "https://github.com/zettajs/zetta-security-mock-driver/issues"
   },
-  "homepage": "https://github.com/landlessness/zetta-security-mock-driver",
+  "homepage": "https://github.com/zettajs/zetta-security-mock-driver",
   "dependencies": {
     "zetta-device": "^0.18.0"
-  }
+  },
+  "directories": {
+    "example": "example"
+  },
+  "devDependencies": {}
 }
