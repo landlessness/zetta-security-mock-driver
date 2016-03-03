@@ -21,12 +21,15 @@ Security.prototype.init = function(config) {
 
 Security.prototype.armStay = function(cb) {
   this.state = 'armed-stay';
+  cb();
 }
 
 Security.prototype.armAway = function(cb) {
   this.state = 'armed-away';
+  cb();
 }
 
 Security.prototype.disarm = function(cb) {
-  this.state = 'disarmed'
+  this.state = 'disarmed';
+  cb();
 }
