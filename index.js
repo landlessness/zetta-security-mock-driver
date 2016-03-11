@@ -14,22 +14,49 @@ Security.prototype.init = function(config) {
     .when('disarmed', {allow: ['arm-stay', 'arm-away']})
     .when('armed-stay', {allow: ['disarm']})
     .when('armed-away', {allow: ['disarm']})
+    .when('arming-stay', {allow: []})
+    .when('arming-away', {allow: []})
+    .when('disarming', {allow: []})
     .map('arm-stay', this.armStay)
     .map('arm-away', this.armAway)
     .map('disarm', this.disarm);
 };
 
 Security.prototype.armStay = function(cb) {
-  this.state = 'armed-stay';
+  
+  this.state = 'arming-stay';
   cb();
+
+  var self = this;
+  setTimeout(function(){
+    self.state = 'armed-stay';
+    cb();
+  }, 500);
+
 }
 
 Security.prototype.armAway = function(cb) {
-  this.state = 'armed-away';
+
+  this.state = 'arming-away';
   cb();
+
+  var self = this;
+  setTimeout(function(){
+    self.state = 'armed-away';
+    cb();
+  }, 500);
+
 }
 
 Security.prototype.disarm = function(cb) {
-  this.state = 'disarmed';
+
+  this.state = 'disarming';
   cb();
+
+  var self = this;
+  setTimeout(function(){
+    self.state = 'disarmed';
+    cb();
+  }, 500);
+
 }

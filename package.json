@@ -1,6 +1,6 @@
 {
   "name": "zetta-security-mock-driver",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Mock Zetta security system.",
   "main": "index.js",
   "scripts": {
