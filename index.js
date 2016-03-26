@@ -1,6 +1,8 @@
 var Device = require('zetta-device');
 var util = require('util');
 
+var TIMEOUT = 3000;
+
 var Security = module.exports = function() {
   Device.call(this);
 };
@@ -8,7 +10,7 @@ util.inherits(Security, Device);
 
 Security.prototype.init = function(config) {
   config
-    .name('Security')
+    .name('Security System')
     .state('disarmed')
     .type('security')
     .when('disarmed', {allow: ['arm-stay', 'arm-away']})
@@ -31,7 +33,7 @@ Security.prototype.armStay = function(cb) {
   setTimeout(function(){
     self.state = 'armed-stay';
     cb();
-  }, 500);
+  }, TIMEOUT);
 
 }
 
@@ -44,7 +46,7 @@ Security.prototype.armAway = function(cb) {
   setTimeout(function(){
     self.state = 'armed-away';
     cb();
-  }, 500);
+  }, TIMEOUT);
 
 }
 
@@ -57,6 +59,6 @@ Security.prototype.disarm = function(cb) {
   setTimeout(function(){
     self.state = 'disarmed';
     cb();
-  }, 500);
+  }, TIMEOUT);
 
 }
